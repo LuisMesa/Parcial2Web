@@ -1,1 +1,18 @@
 /* CSS declarations go here */
+.colombiaMap
+{
+    /*position: absolute;*/
+    /*left:0;*/
+    /*top:0;*/
+    /*width: 70vw;*/
+    /*height: 100vh;*/
+    /*margin: auto;*/
+}
+#canvasForTweets
+{
+    position: absolute;
+    left:15px;
+    top:0;
+    z-index: 5;
+    pointer-events: none;
+}

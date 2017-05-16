@@ -6,10 +6,15 @@ import ColombiaMap from "./ColombiaMap.jsx";
 import TweetsResults from "./TweetsResults.jsx";
 import {Tweets} from "../api/Tweets.js";
 
+import Overlay from "./Overlay.jsx";
+
 export class App extends Component {
   constructor(props) {
     super(props);
+    this.projection = null;
 
+    this.setProjection=this.setProjection.bind(this);
+    this.getProjection=this.getProjection.bind(this);
   }
 
   changeQuery(evt) {
@@ -23,24 +28,40 @@ export class App extends Component {
     Meteor.call("twitter.stream", evt.target.value);
 
   }
+  getProjection()
+  {
+    return this.projection;
+  }
+  setProjection(pProjection)
+  {
+    this.projection=pProjection;
+    // console.log('actualizo el projection');
+  }
 
   //
   render() {
     console.log("render!");
     return (
 
-    <div>
+    <div className="row">
+      {this.props && this.props.tweets ?
+            <div className="col-md-8">
+              <ColombiaMap width={Math.floor(($(document).width())*(2/3))} height={$(document).height()} data={{RISARALDA:10}} setProjection={this.setProjection}> </ColombiaMap>
+              <Overlay tweets={this.props.tweets} getProjection={this.getProjection} width={Math.floor(($(document).width())*(2/3))} height={$(document).height()}/>
+              {/**/}
+            </div>
+
+          :
+          <p>Enter a query</p>
+      }
+      <div className="col-md-4">
       <input type="text" onKeyPress={this.changeQuery.bind(this)} placeholder="Query"/>
       { this.props && this.props.err ?
           <div>Error: {this.props.err}</div> :
           <span></span>
       }
       <h2>Results:</h2>
-      {this.props && this.props.tweets ?
-          <ColombiaMap tweets={this.props.tweets} width="600" height="600" data={{RISARALDA:10}}> </ColombiaMap> :
-          <p>Enter a query</p>
-      }
-
+      </div>
     </div>
 
     );
@@ -56,6 +77,6 @@ export default AppContainer = createContainer(() => {
 
 
   return {
-    tweets: Tweets.find({}).fetch()
+    tweets: Tweets.find({}).fetch().filter((tweet)=>tweet.coordinates)
   };
 }, App);

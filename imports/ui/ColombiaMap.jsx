@@ -9,12 +9,15 @@ export default class ColombiaMap extends Component {
 		super(props);
 		this.projection = null;
     this.renderTweets=this.renderTweets.bind(this);
+    this.getProjection=this.getProjection.bind(this);
 	}
 
 	getProjection() {
 		return this.projection;
 	}
 	componentDidMount() {
+		console.log('width: '+this.props.width);
+    console.log('height: '+this.props.height);
 		var width = this.props.width || 960,
 		    height = this.props.height || 500,
 		    centered;
@@ -267,9 +270,10 @@ export default class ColombiaMap extends Component {
 
     	let long=tweet.coordinates.coordinates[0];
       let lat=tweet.coordinates.coordinates[1];
-      let x= this.getProjection([long,lat])[0];
-      let y= this.getProjection([long,lat])[1];
-      console.log(x+' , '+y);
+      // console.log(long+' , '+lat);
+      let x= this.getProjection()([long,lat])[0];
+      let y= this.getProjection()([long,lat])[1];
+      // console.log(x+' , '+y);
       var svg = d3.select(this.svg);
       // var svgContainer = d3.select("body").append("svg")
       //                                     .attr("width", 200)
@@ -277,8 +281,8 @@ export default class ColombiaMap extends Component {
 
       //Draw the Circle
       var circle = svg.append("circle")
-                               .attr("cx", Math.floor(Math.random()*500))
-                               .attr("cy", Math.floor(Math.random()*500))
+                               .attr("cx", x)
+                               .attr("cy",y)
                                .attr("r", 5);
     }
     });
@@ -286,10 +290,11 @@ export default class ColombiaMap extends Component {
 	render() {
 		return (
 			<div className="colombiaMap">
-				{this.renderTweets()}
+				{/*{this.renderTweets()}*/}
 				<svg
 					ref={(svg) => {this.svg = svg; }}>
 				</svg>
+        {this.props.setProjection(this.getProjection)}
 			</div>);
 	}
 }

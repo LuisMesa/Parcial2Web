@@ -1,0 +1,360 @@
+/*Colors Variables*/
+
+:root{
+    --mainColor1:#fafafa;
+    --mainColor2:#ecf0f1;
+    --mainColor3:#fafafa;
+    --mainColor4:#5e5e5e;
+    --secondColor1:#9d9d9d;
+    --secondColor2:#122b40;
+    --fontColor1:#122b40;
+    --fontColor2:#02bdd5;
+    --fontColor3:#FF5722;
+    --fontColor4:#5e5e5e;
+
+    /*--mainColor1:#5e5e5e;*/
+    /*--mainColor2:#3d3d40;*/
+    /*--mainColor3:#5e5e5e;*/
+    /*--mainColor4:#5e5e5e;*/
+    /*--secondColor1:#9d9d9d;*/
+    /*--secondColor2:#323235;*/
+    /*--fontColor1:#fafafa;*/
+    /*--fontColor2:#02bdd5;*/
+    /*--fontColor3:#FF5722;*/
+    /*--fontColor4:#5e5e5e;*/
+}
+
+body
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--mainColor1);
+    color:var(--fontColor1);
+
+}
+.temporalNavBar {
+    height: 10vh;
+    /*position: fixed;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    background-color: var(--secondColor2);
+    /*z-index: 0!important;*/
+}
+.viewFoundPeople, .viewWantedPeople
+{
+    margin-top: 5vh;
+    /*z-index: -1!important;*/
+}
+/*View FoundPeople*/
+.searchInputFoundPeople {
+    width: 100%;
+    /*padding: 1.315em 2em;*/
+    padding: 0.3em 0.5em;
+    color: var(--fontColor1);
+    border: 0;
+    background-color: var(--mainColor3);
+    border-radius: 0;
+    font-size: 1.5vw;
+}
+.viewFoundPeople .addPersonBtnView .btn
+{
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    width: 100%;
+    background-color: var(--fontColor2);
+    color: #fafafa;
+    font-size: 2vw;
+    padding: 0;
+}
+
+.viewFoundPeople
+{
+    /*display: none;*/
+}
+.panelListFoundPeople
+{
+    background-color: var(--mainColor2);
+    min-height: 80vh;
+    margin-right: 1vw;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.45);
+}
+.panelFoundPeople-title
+{
+    height: 8vh;
+    text-align: center;
+    color:var(--fontColor2);
+    font-size: 2.5vw;
+}
+.panelListFoundPeople tbody tr
+{
+    border-bottom: hidden;
+}
+tbody tr
+{
+    cursor:pointer;
+}
+tbody tr:hover
+{
+    background-color: var(--secondColor1)!important ;
+}
+thead tr
+{
+    color:var(--fontColor2);
+    font-size: 1.5vw;
+}
+.panelDetailFoundPerson
+{
+    background-color: var(--mainColor2);
+    min-height: 80vh;
+    position: fixed;
+    left:68vw;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.45);
+}
+.panelDetailFoundPerson .box-photo
+{
+    /*background-color: var(--secondColor1);*/
+    height: 35vh;
+    padding: 0 0 0 0!important;
+}
+.panelDetailFoundPerson .box-photo img
+{
+    width: 100%;
+}
+.panelDetailFoundPerson .boxField-Name p
+{
+    text-align: center;
+    color:var(--fontColor2);
+    margin-bottom: 0vh;
+    font-size: 2vw;
+    margin-top: 3vh;
+}
+.panelDetailFoundPerson .boxField-HealthState p
+{
+    text-align: center;
+    color:var(--fontColor2);
+    margin-top: 0vh;
+    font-size: 1.3vw;
+}
+.panelDetailFoundPerson .boxField-Date p, .panelDetailFoundPerson .boxField-Place p, boxField-Message p
+{
+    margin-top: 0vh;
+    font-size: 1vw;
+}
+
+/*View WantedPeople*/
+
+
+.searchInputWantedPeople {
+    width: 100%;
+    /*padding: 1.315em 2em;*/
+    padding: 0.3em 0.5em;
+    color: var(--fontColor1);
+    border: 0;
+    background-color: var(--mainColor3);
+    border-radius: 0;
+    font-size: 1.5vw;
+    /*margin-bottom: 10vh;*/
+}
+.viewWantedPeople .addPersonBtnView .btn
+{
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    margin-left: 2vw;
+    width: 100%;
+    background-color: var(--fontColor3);
+    color: #fafafa;
+    font-size: 2vw;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    color:    var(--fontColor1);
+}
+
+.viewWantedPeople
+{
+    /*display: none;*/
+}
+.panelWantedPeople
+{
+    background-color: var(--mainColor2);
+    height: 25vh;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.panelWantedPeople-title
+{
+    height: 8vh;
+    text-align: center;
+    color:var(--fontColor3);
+    font-size: 2.5vw;
+}
+.wantedPeopleBox
+{
+    height: 40vh;
+    margin-bottom: 5vh!important;
+
+}
+.wantedPeopleBox .boxFields
+{
+    background-color: var(--mainColor2);
+    min-height: 15vh;
+    /*height: 10vh;*/
+    margin-left: 0vw;
+    margin-right: 0vw;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.wantedPeopleBox .box-photo
+{
+    /*background-color: #9d9d9d;*/
+    max-height: 25vh;
+}
+.wantedPeopleBox .box-photo img
+{
+    /*height: 20vh;*/
+    /*width: 100%;*/
+}
+.wantedPeopleBox .boxField-Name p
+{
+    text-align: center;
+    color:var(--fontColor3);
+    margin-bottom: 0;
+    font-size: 2vw;
+}
+.logOut
+{
+    color:#fafafa;
+}
+.logout .logOut
+{
+    color:#fafafa;
+}
+a .logOut:hover
+{
+    color:#F24B4B;
+}
+
+/*View AddPeople*/
+/*Modals*/
+/*.viewAddFoundPerson .panelAddPerson*/
+/*{*/
+    /*background-color: var(--mainColor2);*/
+    /*height: 80vh;*/
+    /*box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+/*}*/
+/*.viewAddWantedPerson .panelAddPerson*/
+/*{*/
+    /*background-color: var(--mainColor2);*/
+    /*height: 65vh;*/
+    /*box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+/*}*/
+.modalAddFoundPerson
+{
+    z-index: 5!important;
+    background-color: var(--mainColor2);
+    height: 80vh;
+    width: 26vw;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    top: 10vh;
+    left: 37vw;
+    right: 37vw;
+    bottom: 10vh;
+    padding: 0;
+}
+.modalAddWantedPerson
+{
+    z-index: 5!important;
+    background-color: var(--mainColor2);
+    height: 65vh;
+    width: 26vw;
+    box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    top: 10vh;
+    left: 37vw;
+    right: 37vw;
+    bottom: 10vh;
+    padding: 0;
+}
+.modalOverlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(127, 140, 141,0.7);
+
+}
+.modalAddFoundPerson .row, .modalAddWantedPerson .row
+{
+    margin: 0;
+}
+.panelAddPerson .box-photo
+{
+    height: 35vh;
+    background-color: var(--secondColor1);
+    margin-bottom: 2vh;
+}
+.panelAddPerson .addPersonField
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.addPersonField input
+{
+    text-align: center;
+}
+.addPersonField textarea
+{
+    box-sizing: border-box;
+    width: 100%;
+}
+.addPersonBtn .btn
+{
+    margin-top: 2vh;
+    width: 100%;
+}
+
+.background-image
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1!important;
+
+    display: block;
+    background-image: url('/data/background/fireman.jpg');
+    width: 100%;
+    height: 100%;
+
+    /*-webkit-filter: blur(2px);*/
+    /*-moz-filter: blur(2px);*/
+    /*-o-filter: blur(2px);*/
+    /*-ms-filter: blur(2px);*/
+    filter: blur(2px);
+    filter: grayscale(40%);
+}
+.out
+{
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+    height: 50%;
+    line-height: 0.8!important;
+    text-align: center;
+}
+.out p
+{
+    font-size: 1vw;
+}
+.out a
+{
+    font-size: 2vw;
+}
+.out a, .out p
+{
+    padding: 2px!important;
+    margin: 2px;
+
+}
