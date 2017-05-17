@@ -1,18 +1,101 @@
-/* CSS declarations go here */
+:root {
+    --mainColor1:#5e5e5e;
+    --mainColor2:#3d3d40;
+    --mainColor3:#5e5e5e;
+    --mainColor4:#5e5e5e;
+    --secondColor1:#9d9d9d;
+    --secondColor2:#323235;
+    --fontColor1:#fafafa;
+    --fontColor2:#02bdd5;
+    --fontColor3:#FF5722;
+    --fontColor4:#5e5e5e;
+}
+body{
+    /*background-color: #3d3d40;*/
+    /*overflow-y: scroll;*/
+    overflow-x: hidden;
+}
 .colombiaMap
 {
-    /*position: absolute;*/
-    /*left:0;*/
-    /*top:0;*/
-    /*width: 70vw;*/
-    /*height: 100vh;*/
-    /*margin: auto;*/
+    position: fixed;
+    left:0;
+    top:0;
+
+}
+.col-md-8
+{
+    padding-left: 0!important;
+}
+.col-md-4
+{
+
 }
 #canvasForTweets
 {
-    position: absolute;
-    left:15px;
+    position: fixed;
+    left:0;
     top:0;
     z-index: 5;
     pointer-events: none;
 }
+
+.tweetsBox
+{
+    background-color: #3d3d40;
+    padding-left: 2vw;
+
+    min-height: 100vh;
+}
+.tweetsBox input
+{
+    background-color: #9d9d9d!important;
+    color: #fafafa;
+    width: 100%;
+    /*padding: 1.315em 2em;*/
+    padding: 0.3em 0.5em;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.5vw;
+    /*margin-bottom: 10vh;*/
+}
+.tweet
+{
+    background-color: #323235;
+    border: 2px solid #242627;
+    padding: 1vh 0vw 1vh 0vw!important;
+    margin: 1vh 6vw 1vh 0;
+    width: 95%;
+}
+.tweet-name
+{
+    font-size: 1.5vw;
+    line-height: 0.9;
+    padding-left: 5px;
+    padding-right: 2px;
+}
+.tweet-screen_name
+{
+    font-size: 1vw;
+    color: #02bdd5;
+    padding-left: 5px;
+}
+.tweet-date .day
+{
+    font-size: 1.3vw;
+    text-align: center;
+}
+.tweet-date .month
+{
+    font-size: 1.3vw;
+    text-align: center;
+}
+.tweet-date .hour
+{
+    text-align: center;
+}
+.main-title
+{
+    text-align: center;
+    color:#FF5722;
+}
+
