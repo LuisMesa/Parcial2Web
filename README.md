@@ -5,7 +5,7 @@ Este proyeto muestra en tiempo real la ubicación e información de los tweets q
 # Diferenciador del proyecto
 El proyecto no solo muestra la ubicación de los tweets, sino muestra estos mismos en la barra lateral derecha.
 
-Configuración:
+# Configuración:
 # Credenciales de Twitter
 
 ```
@@ -20,5 +20,5 @@ export TWITTER_ACCESS_TOKEN_SECRET="yourCredentialsHere"
 meteor npm install
 meteor
 ```
-
+Listo! En este momento la aplicación debe estar desplegada en localhost:3000
 
