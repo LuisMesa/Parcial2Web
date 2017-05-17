@@ -1,6 +1,12 @@
-# twitterStreamerMeteor
+# Parcial 2 Programación con Tecnologías Web
 
-A simple boilerplate for a Meteor 1.4 Twitter streamer application with React. Uses the twitter [npm](https://www.npmjs.com/package/twitter) module for connecting to twitter. It requires you to setup your credentials on the server using environment variables:
+Este proyeto muestra en tiempo real la ubicación e información de los tweets que sucedan en colombia.
+
+# Diferenciador del proyecto
+El proyecto no solo muestra la ubicación de los tweets, sino muestra estos mismos en la barra lateral derecha.
+
+Configuración:
+# Credenciales de Twitter
 
 ```
 export TWITTER_CONSUMER_KEY="yourCredentialsHere"
@@ -8,8 +14,11 @@ export TWITTER_CONSUMER_SECRET="yourCredentialsHere"
 export TWITTER_ACCESS_TOKEN_KEY="yourCredentialsHere"
 export TWITTER_ACCESS_TOKEN_SECRET="yourCredentialsHere"
 
+```
+# Instalación de paquetes y ejecución del proyecto
+```
 meteor npm install
 meteor
 ```
 
-This is a very basic implementation that handles a global search shared by all users and doesn't implement any security or restriction. It's intended as a starting point, so add your own requirements.
+
